@@ -20,7 +20,7 @@ app.get('/product-forklifts', (req, res) => {
 })
 
 
-app.get('/product-seller', (req, res) => {
+app.get('/', (req, res) => {
     db.query('SELECT * FROM product_gp', (err, result) => {
         if (err) {
             console.log(err);
