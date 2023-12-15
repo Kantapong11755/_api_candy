@@ -9,16 +9,6 @@ app.use(express.json());
 
 const db = mysql.createConnection(process.env.DATABASE_URL);
 
-app.get('/product-forklifts', (req, res) => {
-    db.query("SELECT * FROM forklifts", (err, result) => {
-        if (err) {
-            console.log(err);
-        }else {
-            res.send(result);
-        }
-    })
-})
-
 
 app.get('/product-seller', (req, res) => {
     db.query('SELECT * FROM product_gp', (err, result) => {
